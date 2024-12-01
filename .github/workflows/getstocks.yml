@@ -5,7 +5,11 @@ on:
     # Run every day at 10:00AM UTC
     - cron: '0 10 * * *'
   workflow_dispatch:
-  
+
+permissions:
+  contents: write 
+  # Grant write permissions to the repository so that the script can commit and push changes
+
 jobs:
   run-stocks-script:
     runs-on: ubuntu-latest
